@@ -356,6 +356,14 @@
   .chart-card svg{width:100%;height:auto;display:block;}
   .chart-card .chart-visual svg{width:200px;max-width:100%;}
 </style>
+<style id="zahi-charts-2">
+  .chart-cols{display:flex;gap:18px;flex-wrap:wrap;justify-content:center;margin-top:4px;}
+  .chart-cols>div{flex:1 1 220px;max-width:260px;}
+  .stat-row{display:flex;gap:14px;flex-wrap:wrap;margin-top:18px;}
+  .stat-chip{background:var(--surface);border:1px solid var(--line);border-radius:10px;padding:12px 14px;flex:1 1 150px;text-align:center;}
+  .stat-chip .sv{font-family:'Quicksand',sans-serif;font-weight:700;font-size:21px;color:var(--blue);}
+  .stat-chip .sl{font-size:12px;color:var(--slate);margin-top:4px;}
+</style>
 </head>
 <body>
 
@@ -444,21 +452,21 @@
 
     <div class="chart-card">
       <div class="chart-flex">
-        <div class="chart-visual"><svg viewBox="0 0 200 200" width="200" height="200" role="img" aria-labelledby="meterTitle">
-  <title id="meterTitle">Apenas 18% do faturamento vira lucro real neste exemplo</title>
-  <circle cx="100.0" cy="100.0" r="91.0" fill="none" stroke="#EAF0FA" stroke-width="18"/>
-  <circle cx="100.0" cy="100.0" r="91.0" fill="none" stroke="#214C9C" stroke-width="18"
-    stroke-linecap="round" stroke-dasharray="102.92 468.85"
-    transform="rotate(-90 100.0 100.0)"/>
-  <text x="100.0" y="96.0" text-anchor="middle" font-family="Quicksand,sans-serif" font-weight="700" font-size="40" fill="#000000">18%</text>
-  <text x="100.0" y="122.0" text-anchor="middle" font-family="Inter,sans-serif" font-size="12.5" fill="#5C6B7A">vira lucro real</text>
-</svg></div>
-        <div class="chart-text">
-          <h3>Para onde vai o faturamento?</h3>
-          <p class="chart-caption">Em negócios sem clareza financeira, é comum que <strong>menos de 1 em cada 5 reais faturados</strong> chegue como lucro de verdade — o resto se perde em custo mal calculado, desperdício e despesas não controladas.</p>
-          <p class="chart-disclaimer">Exemplo ilustrativo, não reflete dados de um cliente específico.</p>
+        <div class="chart-text" style="flex:1 1 100%;">
+          <h3>Quando o "achismo" vira número</h3>
+          <p class="chart-caption">Em um cliente real acompanhado pela Zahi, a taxa de estornos chegou a <strong>3,93% do faturamento</strong> em um único mês — quase o dobro da meta de referência (abaixo de 2%). Sem leitura mensal, esse tipo de desvio passa despercebido até virar hábito.</p>
         </div>
       </div>
+      <svg viewBox="0 0 560 170" width="100%" height="auto" role="img" aria-label="Taxa de estornos real de 3.93% contra meta de 2%">
+<path d="M20,42 Q20,36 26,36 L534,36 Q540,36 540,42 L540,76 L20,76 Z" fill="#EAF0FA"/>
+<path d="M20,42 Q20,36 26,36 L422.72,36 Q428.72,36 428.72,42 L428.72,76 L20,76 Z" fill="#d03b3b"/>
+<line x1="228.0" y1="26" x2="228.0" y2="86" stroke="#000000" stroke-width="2.5"/>
+<text x="228.0" y="20" text-anchor="middle" font-family="Inter,sans-serif" font-size="12.5" font-weight="700" fill="#000000">Meta: 2%</text>
+<text x="438.72" y="62.0" text-anchor="start" font-family="Quicksand,sans-serif" font-size="22" font-weight="700" fill="#d03b3b">3.93%</text>
+<text x="20" y="104" text-anchor="start" font-family="Inter,sans-serif" font-size="11.5" fill="#5C6B7A">0%</text>
+<text x="540" y="104" text-anchor="end" font-family="Inter,sans-serif" font-size="11.5" fill="#5C6B7A">5%</text>
+</svg>
+      <p class="chart-disclaimer">Dado real de um cliente da Consultoria Zahi, nome preservado por confidencialidade.</p>
     </div>
     <div class="servicos-grid" style="grid-template-columns:repeat(3,1fr);">
       <div class="service-card">
@@ -610,28 +618,34 @@
 
     <div class="chart-card">
       <div class="chart-legend">
-        <span><span class="dot" style="background:var(--blue-light);"></span>Antes da Metodologia Zahi</span>
+        <span><span class="dot" style="background:#d03b3b;"></span>Antes da Metodologia Zahi</span>
         <span><span class="dot" style="background:var(--blue);"></span>Depois da Metodologia Zahi</span>
       </div>
-      <svg viewBox="0 0 640 300" width="100%" height="auto" role="img" aria-label="Comparativo antes e depois da Metodologia Zahi, exemplo ilustrativo">
-<line x1="16" y1="244" x2="624" y2="244" stroke="rgba(0,0,0,0.10)" stroke-width="1"/>
-<path d="M91.33333333333333,163.2 Q91.33333333333333,159.2 95.33333333333333,159.2 L111.33333333333333,159.2 Q115.33333333333333,159.2 115.33333333333333,163.2 L115.33333333333333,244.0 L91.33333333333333,244.0 Z" fill="#6F8BBF"/>
-<path d="M119.33333333333333,46.60000000000002 Q119.33333333333333,42.60000000000002 123.33333333333333,42.60000000000002 L139.33333333333331,42.60000000000002 Q143.33333333333331,42.60000000000002 143.33333333333331,46.60000000000002 L143.33333333333331,244.0 L119.33333333333333,244.0 Z" fill="#214C9C"/>
-<text x="103.33333333333333" y="151.2" text-anchor="middle" font-family="Inter,sans-serif" font-size="13" font-weight="600" fill="#5C6B7A">8%</text>
-<text x="131.33333333333331" y="34.60000000000002" text-anchor="middle" font-family="Inter,sans-serif" font-size="13" font-weight="700" fill="#214C9C">19%</text>
-<text x="117.33333333333333" y="266" text-anchor="middle" font-family="Inter,sans-serif" font-size="12.5" fill="#000000" font-weight="600">Margem de Lucro</text>
-<path d="M294.0,184.4 Q294.0,180.4 298.0,180.4 L314.0,180.4 Q318.0,180.4 318.0,184.4 L318.0,244.0 L294.0,244.0 Z" fill="#6F8BBF"/>
-<path d="M322.0,57.19999999999999 Q322.0,53.19999999999999 326.0,53.19999999999999 L342.0,53.19999999999999 Q346.0,53.19999999999999 346.0,57.19999999999999 L346.0,244.0 L322.0,244.0 Z" fill="#214C9C"/>
-<text x="306.0" y="172.4" text-anchor="middle" font-family="Inter,sans-serif" font-size="13" font-weight="600" fill="#5C6B7A">3/10</text>
-<text x="334.0" y="45.19999999999999" text-anchor="middle" font-family="Inter,sans-serif" font-size="13" font-weight="700" fill="#214C9C">9/10</text>
-<text x="320.0" y="266" text-anchor="middle" font-family="Inter,sans-serif" font-size="12.5" fill="#000000" font-weight="600">Clareza Financeira</text>
-<path d="M496.66666666666663,200.88888888888889 Q496.66666666666663,196.88888888888889 500.66666666666663,196.88888888888889 L516.6666666666666,196.88888888888889 Q520.6666666666666,196.88888888888889 520.6666666666666,200.88888888888889 L520.6666666666666,244.0 L496.66666666666663,244.0 Z" fill="#6F8BBF"/>
-<path d="M524.6666666666666,47.77777777777777 Q524.6666666666666,43.77777777777777 528.6666666666666,43.77777777777777 L544.6666666666666,43.77777777777777 Q548.6666666666666,43.77777777777777 548.6666666666666,47.77777777777777 L548.6666666666666,244.0 L524.6666666666666,244.0 Z" fill="#214C9C"/>
-<text x="508.66666666666663" y="188.88888888888889" text-anchor="middle" font-family="Inter,sans-serif" font-size="13" font-weight="600" fill="#5C6B7A">20%</text>
-<text x="536.6666666666666" y="35.77777777777777" text-anchor="middle" font-family="Inter,sans-serif" font-size="13" font-weight="700" fill="#214C9C">85%</text>
-<text x="522.6666666666666" y="266" text-anchor="middle" font-family="Inter,sans-serif" font-size="12.5" fill="#000000" font-weight="600">Decisões Baseadas em Dados</text>
-</svg>
-      <p class="chart-disclaimer">Exemplo ilustrativo de evolução típica relatada por clientes, não é uma promessa de resultado.</p>
+      <h3 style="text-align:center;font-size:17px;margin-bottom:4px;">Case real: redução de estornos</h3>
+      <div class="chart-cols">
+        <div><svg viewBox="0 0 260 210" width="100%" height="auto" role="img" aria-label="Valor estornado (R$): antes R$ 3.043, depois R$ 367">
+<line x1="16" y1="164" x2="244" y2="164" stroke="rgba(0,0,0,0.10)" stroke-width="1"/>
+<path d="M73.0,28.26124999999999 Q73.0,23.26124999999999 78.0,23.26124999999999 L116.0,23.26124999999999 Q121.0,23.26124999999999 121.0,28.26124999999999 L121.0,164.0 L73.0,164.0 Z" fill="#d03b3b"><title>Antes: R$ 3.043</title></path>
+<path d="M139.0,152.02625 Q139.0,147.02625 144.0,147.02625 L182.0,147.02625 Q187.0,147.02625 187.0,152.02625 L187.0,164.0 L139.0,164.0 Z" fill="#214C9C"><title>Depois: R$ 367</title></path>
+<text x="97.0" y="13.26124999999999" text-anchor="middle" font-family="Inter,sans-serif" font-size="14" font-weight="700" fill="#d03b3b">R$ 3.043</text>
+<text x="163.0" y="137.02625" text-anchor="middle" font-family="Inter,sans-serif" font-size="14" font-weight="700" fill="#214C9C">R$ 367</text>
+<text x="130.0" y="186" text-anchor="middle" font-family="Inter,sans-serif" font-size="12.5" font-weight="600" fill="#000000">Valor estornado (R$)</text>
+</svg></div>
+        <div><svg viewBox="0 0 260 210" width="100%" height="auto" role="img" aria-label="Itens estornados (un.): antes 200 un., depois 30 un.">
+<line x1="16" y1="164" x2="244" y2="164" stroke="rgba(0,0,0,0.10)" stroke-width="1"/>
+<path d="M73.0,34.45454545454547 Q73.0,29.454545454545467 78.0,29.454545454545467 L116.0,29.454545454545467 Q121.0,29.454545454545467 121.0,34.45454545454547 L121.0,164.0 L73.0,164.0 Z" fill="#d03b3b"><title>Antes: 200 un.</title></path>
+<path d="M139.0,148.8181818181818 Q139.0,143.8181818181818 144.0,143.8181818181818 L182.0,143.8181818181818 Q187.0,143.8181818181818 187.0,148.8181818181818 L187.0,164.0 L139.0,164.0 Z" fill="#214C9C"><title>Depois: 30 un.</title></path>
+<text x="97.0" y="19.454545454545467" text-anchor="middle" font-family="Inter,sans-serif" font-size="14" font-weight="700" fill="#d03b3b">200 un.</text>
+<text x="163.0" y="133.8181818181818" text-anchor="middle" font-family="Inter,sans-serif" font-size="14" font-weight="700" fill="#214C9C">30 un.</text>
+<text x="130.0" y="186" text-anchor="middle" font-family="Inter,sans-serif" font-size="12.5" font-weight="600" fill="#000000">Itens estornados (un.)</text>
+</svg></div>
+      </div>
+      <div class="stat-row">
+        <div class="stat-chip"><div class="sv">−87,94%</div><div class="sl">em valor estornado</div></div>
+        <div class="stat-chip"><div class="sv">−85%</div><div class="sl">em itens estornados</div></div>
+        <div class="stat-chip"><div class="sv">R$ 2.676,25</div><div class="sl">recuperados no período</div></div>
+      </div>
+      <p class="chart-disclaimer">Caso real de um cliente da Consultoria Zahi, nome preservado por confidencialidade. Projeção anual considera a manutenção dos resultados por 12 meses; a redução no valor de estornos não representa necessariamente economia ou lucro adicional equivalente.</p>
     </div>
     <div class="servicos-grid" style="grid-template-columns:repeat(4,1fr);">
       <div class="service-card">
@@ -704,34 +718,34 @@
 
     <div class="chart-card">
       <div class="chart-legend">
-        <span><span class="dot" style="background:var(--blue-deep);"></span>Curva A — prioridade máxima</span>
-        <span><span class="dot" style="background:var(--blue);"></span>Curva B — giro intermediário</span>
-        <span><span class="dot" style="background:var(--blue-light);"></span>Curva C — baixo impacto</span>
+        <span><span class="dot" style="background:var(--blue);"></span>Curva A — prioridade máxima</span>
+        <span><span class="dot" style="background:#eb6834;"></span>Curva B — giro intermediário</span>
+        <span><span class="dot" style="background:#1baf7a;"></span>Curva C — baixo impacto</span>
       </div>
       <svg viewBox="0 0 640 300" width="100%" height="auto" role="img" aria-label="Curva ABC de produtos, exemplo ilustrativo">
 <line x1="16" y1="244" x2="624" y2="244" stroke="rgba(0,0,0,0.10)" stroke-width="1"/>
-<path d="M39.0,32.0 Q39.0,28.0 43.0,28.0 L65.0,28.0 Q69.0,28.0 69.0,32.0 L69.0,244.0 L39.0,244.0 Z" fill="#122b5c"><title>P1: 22% do faturamento (Curva A)</title></path>
+<path d="M39.0,32.0 Q39.0,28.0 43.0,28.0 L65.0,28.0 Q69.0,28.0 69.0,32.0 L69.0,244.0 L39.0,244.0 Z" fill="#214C9C"><title>P1: 22% do faturamento (Curva A)</title></path>
 <text x="54.0" y="21.0" text-anchor="middle" font-family="Inter,sans-serif" font-size="11.5" font-weight="700" fill="#000000">22%</text>
 <text x="54.0" y="262" text-anchor="middle" font-family="JetBrains Mono,monospace" font-size="11" fill="#5C6B7A">P1</text>
-<path d="M115.0,71.27272727272725 Q115.0,67.27272727272725 119.0,67.27272727272725 L141.0,67.27272727272725 Q145.0,67.27272727272725 145.0,71.27272727272725 L145.0,244.0 L115.0,244.0 Z" fill="#122b5c"><title>P2: 18% do faturamento (Curva A)</title></path>
+<path d="M115.0,71.27272727272725 Q115.0,67.27272727272725 119.0,67.27272727272725 L141.0,67.27272727272725 Q145.0,67.27272727272725 145.0,71.27272727272725 L145.0,244.0 L115.0,244.0 Z" fill="#214C9C"><title>P2: 18% do faturamento (Curva A)</title></path>
 <text x="130.0" y="60.27272727272725" text-anchor="middle" font-family="Inter,sans-serif" font-size="11.5" font-weight="700" fill="#000000">18%</text>
 <text x="130.0" y="262" text-anchor="middle" font-family="JetBrains Mono,monospace" font-size="11" fill="#5C6B7A">P2</text>
-<path d="M191.0,110.54545454545456 Q191.0,106.54545454545456 195.0,106.54545454545456 L217.0,106.54545454545456 Q221.0,106.54545454545456 221.0,110.54545454545456 L221.0,244.0 L191.0,244.0 Z" fill="#122b5c"><title>P3: 14% do faturamento (Curva A)</title></path>
+<path d="M191.0,110.54545454545456 Q191.0,106.54545454545456 195.0,106.54545454545456 L217.0,106.54545454545456 Q221.0,106.54545454545456 221.0,110.54545454545456 L221.0,244.0 L191.0,244.0 Z" fill="#214C9C"><title>P3: 14% do faturamento (Curva A)</title></path>
 <text x="206.0" y="99.54545454545456" text-anchor="middle" font-family="Inter,sans-serif" font-size="11.5" font-weight="700" fill="#000000">14%</text>
 <text x="206.0" y="262" text-anchor="middle" font-family="JetBrains Mono,monospace" font-size="11" fill="#5C6B7A">P3</text>
-<path d="M267.0,149.8181818181818 Q267.0,145.8181818181818 271.0,145.8181818181818 L293.0,145.8181818181818 Q297.0,145.8181818181818 297.0,149.8181818181818 L297.0,244.0 L267.0,244.0 Z" fill="#214C9C"><title>P4: 10% do faturamento (Curva B)</title></path>
+<path d="M267.0,149.8181818181818 Q267.0,145.8181818181818 271.0,145.8181818181818 L293.0,145.8181818181818 Q297.0,145.8181818181818 297.0,149.8181818181818 L297.0,244.0 L267.0,244.0 Z" fill="#eb6834"><title>P4: 10% do faturamento (Curva B)</title></path>
 <text x="282.0" y="138.8181818181818" text-anchor="middle" font-family="Inter,sans-serif" font-size="11.5" font-weight="700" fill="#000000">10%</text>
 <text x="282.0" y="262" text-anchor="middle" font-family="JetBrains Mono,monospace" font-size="11" fill="#5C6B7A">P4</text>
-<path d="M343.0,169.45454545454544 Q343.0,165.45454545454544 347.0,165.45454545454544 L369.0,165.45454545454544 Q373.0,165.45454545454544 373.0,169.45454545454544 L373.0,244.0 L343.0,244.0 Z" fill="#214C9C"><title>P5: 8% do faturamento (Curva B)</title></path>
+<path d="M343.0,169.45454545454544 Q343.0,165.45454545454544 347.0,165.45454545454544 L369.0,165.45454545454544 Q373.0,165.45454545454544 373.0,169.45454545454544 L373.0,244.0 L343.0,244.0 Z" fill="#eb6834"><title>P5: 8% do faturamento (Curva B)</title></path>
 <text x="358.0" y="158.45454545454544" text-anchor="middle" font-family="Inter,sans-serif" font-size="11.5" font-weight="700" fill="#000000">8%</text>
 <text x="358.0" y="262" text-anchor="middle" font-family="JetBrains Mono,monospace" font-size="11" fill="#5C6B7A">P5</text>
-<path d="M419.0,179.27272727272728 Q419.0,175.27272727272728 423.0,175.27272727272728 L445.0,175.27272727272728 Q449.0,175.27272727272728 449.0,179.27272727272728 L449.0,244.0 L419.0,244.0 Z" fill="#214C9C"><title>P6: 7% do faturamento (Curva B)</title></path>
+<path d="M419.0,179.27272727272728 Q419.0,175.27272727272728 423.0,175.27272727272728 L445.0,175.27272727272728 Q449.0,175.27272727272728 449.0,179.27272727272728 L449.0,244.0 L419.0,244.0 Z" fill="#eb6834"><title>P6: 7% do faturamento (Curva B)</title></path>
 <text x="434.0" y="168.27272727272728" text-anchor="middle" font-family="Inter,sans-serif" font-size="11.5" font-weight="700" fill="#000000">7%</text>
 <text x="434.0" y="262" text-anchor="middle" font-family="JetBrains Mono,monospace" font-size="11" fill="#5C6B7A">P6</text>
-<path d="M495.0,198.9090909090909 Q495.0,194.9090909090909 499.0,194.9090909090909 L521.0,194.9090909090909 Q525.0,194.9090909090909 525.0,198.9090909090909 L525.0,244.0 L495.0,244.0 Z" fill="#6F8BBF"><title>P7: 5% do faturamento (Curva C)</title></path>
+<path d="M495.0,198.9090909090909 Q495.0,194.9090909090909 499.0,194.9090909090909 L521.0,194.9090909090909 Q525.0,194.9090909090909 525.0,198.9090909090909 L525.0,244.0 L495.0,244.0 Z" fill="#1baf7a"><title>P7: 5% do faturamento (Curva C)</title></path>
 <text x="510.0" y="187.9090909090909" text-anchor="middle" font-family="Inter,sans-serif" font-size="11.5" font-weight="700" fill="#000000">5%</text>
 <text x="510.0" y="262" text-anchor="middle" font-family="JetBrains Mono,monospace" font-size="11" fill="#5C6B7A">P7</text>
-<path d="M571.0,208.72727272727272 Q571.0,204.72727272727272 575.0,204.72727272727272 L597.0,204.72727272727272 Q601.0,204.72727272727272 601.0,208.72727272727272 L601.0,244.0 L571.0,244.0 Z" fill="#6F8BBF"><title>P8: 4% do faturamento (Curva C)</title></path>
+<path d="M571.0,208.72727272727272 Q571.0,204.72727272727272 575.0,204.72727272727272 L597.0,204.72727272727272 Q601.0,204.72727272727272 601.0,208.72727272727272 L601.0,244.0 L571.0,244.0 Z" fill="#1baf7a"><title>P8: 4% do faturamento (Curva C)</title></path>
 <text x="586.0" y="197.72727272727272" text-anchor="middle" font-family="Inter,sans-serif" font-size="11.5" font-weight="700" fill="#000000">4%</text>
 <text x="586.0" y="262" text-anchor="middle" font-family="JetBrains Mono,monospace" font-size="11" fill="#5C6B7A">P8</text>
 </svg>
